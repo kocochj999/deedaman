@@ -19,6 +19,7 @@ namespace WindowsFormsApp2
         ItemUC UC5;
         ItemUC UC6;
         List<ItemUC> foodList;
+        
 
 
         public FoodUC()
@@ -54,11 +55,23 @@ namespace WindowsFormsApp2
             {
                 this.Controls.Add(uc);
             }
-
         }
+
+        public List<ItemUC> FoodList { get => foodList; set => foodList = value; }
         
-            
-            
-        
+
+        public float TotalOfTotal()
+        {
+            float result = 0;
+            foreach (ItemUC item in foodList)
+            {
+                result += item.totalItem();
+            }
+            return result;
+        }
+
+
+
+
     }
 }

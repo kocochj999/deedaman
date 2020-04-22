@@ -12,41 +12,55 @@ namespace WindowsFormsApp2
 {
     public partial class CardUC : UserControl
     {
-        ItemUC UC1;
-        ItemUC UC2;
-        ItemUC UC3;
-        ItemUC UC4;
-        List<ItemUC> hourList;
+        ItemUC2 UC1;
+        ItemUC2 UC2;
+        ItemUC2 UC3;
+        ItemUC2 UC4;
+        ItemUC2 UC5;
+        List<ItemUC2> cardList;
 
         public CardUC()
         {
             InitializeComponent();
+            UC1 = new ItemUC2(Properties.Resources.thẻ_viettel, "Viettel",  0);
+            UC2 = new ItemUC2(Properties.Resources.thẻ_vina, "Vinaphone",  0);
+            UC3 = new ItemUC2(Properties.Resources.thẻ_VNG, "Vinagame",  0);
+            UC4 = new ItemUC2(Properties.Resources.thẻ_VTC, "VTCGame",  0);
+
+            cardList = new List<ItemUC2>();
+
+            cardList.Add(UC1);
+            cardList.Add(UC2);
+            cardList.Add(UC3);
+            cardList.Add(UC4);
             
-                ItemUC UC1 = new ItemUC(Properties.Resources.gamehandle, "10000", 10000, 0);
-                ItemUC UC2 = new ItemUC(Properties.Resources.gamehandle, "20000", 20000, 0);
-                ItemUC UC3 = new ItemUC(Properties.Resources.gamehandle, "50000", 50000, 0);
-                ItemUC UC4 = new ItemUC(Properties.Resources.gamehandle, "100000", 100000, 0);
-
-                hourList = new List<ItemUC>();
-                hourList.Add(UC1);
-                hourList.Add(UC2);
-                hourList.Add(UC3);
-                hourList.Add(UC4);
-                int k = 0;
-                for (int i = 0; i < (hourList.Count / 2); i++)
+            int k = 0;
+            
+            for (int i = 0; i < (cardList.Count/2) ; i++)
+            {
+                for (int j = 0; j < 2; j++)
                 {
-                    for (int j = 0; j < 2; j++)
-                    {
-                        hourList[k].Location = new Point(75 + j * 350, i * 350);
-                        k++;
-                    }
+                    cardList[k].Location = new Point(75 + j * 350, i * 350);
+                    k++;
                 }
-                foreach (ItemUC uc in hourList)
-                {
-                    this.Controls.Add(uc);
-                }
-               
+            }
+            foreach (ItemUC2 uc in cardList)
+            {
+                this.Controls.Add(uc);
+            }
 
+        }
+
+        public List<ItemUC2> CardList { get => cardList; set => cardList = value; }
+
+        public float TotalOfTotal()
+        {
+            float result = 0;
+            foreach (ItemUC2 item in cardList)
+            {
+                result += item.totalItem();
+            }
+            return result;
         }
     }
 }

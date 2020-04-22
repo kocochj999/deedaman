@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class ItemUC : UserControl
+    public partial class ItemUC2 : UserControl
     {
-        public ItemUC()
+        public ItemUC2()
         {
             InitializeComponent();
         }
 
-        private void UserControlFood_Load(object sender, EventArgs e)
+        private void ItemUC2_Load(object sender, EventArgs e)
         {
             foreach (Control ctl in Controls)
             {
@@ -28,31 +28,28 @@ namespace WindowsFormsApp2
             }
         }
         private void Ctl_MouseWheel(object sender, MouseEventArgs e)
-        {
-            ((HandledMouseEventArgs)e).Handled = true;
-        }
+            {
+                ((HandledMouseEventArgs)e).Handled = true;
+            }
 
 
         private string foodName;
         private float price;
         private int quantity;
-        
-        
 
-        public float Price { get => price; set => price = value; }
         public string FoodName { get => foodName; set => foodName = value; }
+        public float Price { get => price; set => price = value; }
         public int Quantity { get => quantity; set => quantity = value; }
 
-        public ItemUC(Bitmap img,  string n, float p, int q)
+        public ItemUC2(Bitmap img, string n, int q)
         {
             InitializeComponent();
             this.pictureBox2.Image = img;
-            
+
             this.foodName = n;
             this.labelName.Text = this.foodName;
 
-            this.price = p;
-            this.labelPrice.Text = this.price.ToString();
+            
 
             this.quantity = q;
             this.numericQuantity.Value = this.quantity;
@@ -60,12 +57,24 @@ namespace WindowsFormsApp2
 
         private void numericQuantity_ValueChanged(object sender, EventArgs e)
         {
-            this.quantity = (int) this.numericQuantity.Value;
+            
+        }
+        private void listBoxPrice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.price = float.Parse(this.listBoxPrice.Text);
+        }
+        private void numericQuantity_ValueChanged_1(object sender, EventArgs e)
+        {
+            this.quantity = (int)this.numericQuantity.Value;
         }
         public float totalItem()
         {
             return this.quantity * this.price;
         }
-        
+
+        private void change(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

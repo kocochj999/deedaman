@@ -95,8 +95,9 @@
             this.numericQuantity.Name = "numericQuantity";
             this.numericQuantity.Size = new System.Drawing.Size(76, 20);
             this.numericQuantity.TabIndex = 2;
+            this.numericQuantity.ValueChanged += new System.EventHandler(this.numericQuantity_ValueChanged);
             // 
-            // UserControlFood
+            // ItemUC
             // 
             this.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.AutoSize = true;
@@ -106,7 +107,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.pictureBox2);
-            this.Name = "UserControlFood";
+            this.Name = "ItemUC";
             this.Size = new System.Drawing.Size(259, 269);
             this.Load += new System.EventHandler(this.UserControlFood_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
