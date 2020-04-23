@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyber Service", "WindowsFormsApp2\Cyber Service.csproj", "{9045B8A4-A701-450F-B349-4C24698A147F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{CF2BC967-A9EF-4438-B4AE-08E865E257F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{9045B8A4-A701-450F-B349-4C24698A147F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9045B8A4-A701-450F-B349-4C24698A147F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9045B8A4-A701-450F-B349-4C24698A147F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2BC967-A9EF-4438-B4AE-08E865E257F3}.Debug|Any CPU.ActiveCfg = Debug
+		{CF2BC967-A9EF-4438-B4AE-08E865E257F3}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
