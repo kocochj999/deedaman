@@ -5,8 +5,8 @@
 <title> MY DOTA GUIDE </title>
 
 <style>
-h1 {color: rgba(14, 19, 6, 0.8)}
-body {background-image: url('file:///E:/%E1%BA%A2nh%20Game/earthshaker-aftershock-5025-97fb59bbaa7e0b900880b3a5d8897f331f834d4bf4b55501e2dca883abe90a0c.jpg');
+h1 {color: #0e1306cc}
+body {background-image: url('');
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
@@ -36,7 +36,14 @@ color:red;
 
 <script>
 function displayRealResult(){
-	document.getElementByID("test").innerHTML = "Crimson Guard";
+	document.getElementById("test").innerHTML = "Crimson Guard";
+	document.getElementById("test").style.color = "red";
+}
+
+
+function changeColor(){
+	document.getElementById("r1").style.color = "red";
+	
 }
 </script>
 
@@ -47,77 +54,77 @@ function displayRealResult(){
 </head>
 <body>
 
-<a href = "#r1"> Jump to Zeus's awesome response </a>
-<h1 title = "this is the guide"> Download Steam here: </h1>
-<a class ="link" href ="https://store.steampowered.com/" ; target = "_blank">Steam </a>
-<hr>
+	<a href = "#r1" onclick = "changeColor()"> Jump to Zeus's awesome response </a>
+	<h1 title = "this is the guide"> Download Steam here: </h1>
+	<a class ="link" href ="https://store.steampowered.com/" ; target = "_blank">Steam </a>
+	<hr>
 
-<h1> Read dota 2 patch here: </h1>
-<a class="link" href ="https://www.dota2.com/patches/"; target = "_blank"> Newest Dota patch </a>
-<hr>
+	<h1> Read dota 2 patch here: </h1>
+	<a class="link" href ="https://www.dota2.com/patches/"; target = "_blank"> Newest Dota patch </a>
+	<hr>
 
-<h1> Random image here: </h1>
+	<h1> Random image here: </h1>
 
-<img src= "file:///E:/%E1%BA%A2nh/6milecho.jpg" alt ="random picture" usemap = "#workmap">
-<map name = "workmap">
-<area shape = "rec" coords = "34,44,250,100" href = "https://i.pinimg.com/originals/cf/f8/95/cff8951f4ab249124ead9937d4390285.jpg"; target = "_blank" >
-<hr>
+	<img src= "bindings_dragonforge.png" alt ="random picture" usemap = "#workmap">
+	<map name = "workmap">
+	<area shape = "rec" coords = "34,44,250,100" href = "https://i.pinimg.com/originals/cf/f8/95/cff8951f4ab249124ead9937d4390285.jpg"; target = "_blank" >
+	<hr>
 
-<h1> Useless button here: </h1>
-<b> This button has no function, yet </b>
-<br>
-<br>
-<button style=" border: 2px dashed DodgerBlue; padding: 10px; margin: 50px";> <a href = "https://www.youtube.com/watch?v=cX-Oqdt7gmc"; target ="_blank">  <sub style= "font-size: 115%;">Don't</sub>  click <sup> me</sup> </a></button>
-<hr>
+	<h1> Useless button here: </h1>
+	<b> This button has no function, yet </b>
+	<br>
+	<br>
+	<button style=" border: 2px dashed DodgerBlue; padding: 10px; margin: 50px";> <a href = "https://www.youtube.com/watch?v=cX-Oqdt7gmc"; target ="_blank">  <sub style= "font-size: 115%;">Don't</sub>  click <sup> me</sup> </a></button>
+	<hr>
 
-<div style = "background-color:rgba(116, 222, 71, 0.3)">
-<strong style= "font-size: 200%"><em style= "color:blue"> Some dota 2 heroes: </em> </strong>
-<table>
-<caption> DOTA 2 HEROES <caption>
-	<tr>
-		<th colspan = "5"> DOTA 2 HEROES </th>
-	</tr>
-	<tr>
-		<th> Name </th>
-		<th> Main Attribute </th>
-		<th> Roles </th>
-		<th> Core items </th>
-		<th> Response </th>
-	</tr>
-	<tr>
-		<td> Abaddon </td>
-		<td> Strength </td>
-		<td> Offlane </td>
-		<td id="test"> Solar Crest <button onclick = "displayRealResult()"> ? </button> </td>
-		<td> Lord of Avernus </td>
-	</tr>
-	<tr>
-		<td> Slark </td>
-		<td> Agility </td>
-		<td> Carry </td>
-		<td> Diffusal </td>
-		<td> Mine, right? </td>
-	</tr>
-	<tr>
-		<td> Zeus </td>
-		<td> Intelligence </td>
-		<td> Mid </td>
-		<td> Aghanim's Scepter </td>
-		<td id="r1"> By Zeus </td>
-	</tr>
+	<div style = "background-color:rgba(116, 222, 71, 0.3)">
+	<strong style= "font-size: 200%"><em style= "color:blue"> Some dota 2 heroes: </em> </strong>
+	<table>
+	<caption> DOTA 2 HEROES <caption>
+		<tr>
+			<th colspan = "5"> DOTA 2 HEROES </th>
+		</tr>
+		<tr>
+			<th> Name </th>
+			<th> Main Attribute </th>
+			<th> Roles </th>
+			<th> Core items </th>
+			<th> Response </th>
+		</tr>
+		<tr>
+			<td> Abaddon </td>
+			<td> Strength </td>
+			<td> Offlane </td>
+			<td id="test"> Solar Crest <button onclick = "displayRealResult()"> ? </button> </td>
+			<td> Lord of Avernus </td>
+		</tr>
+		<tr>
+			<td> Slark </td>
+			<td> Agility </td>
+			<td> Carry </td>
+			<td> Diffusal </td>
+			<td> Mine, right? </td>
+		</tr>
+		<tr>
+			<td> Zeus </td>
+			<td> Intelligence </td>
+			<td> Mid </td>
+			<td> Aghanim's Scepter </td>
+			<td id="r1"> By Zeus </td>
+		</tr>
 
-</table>
-</div>
-<hr>
+	</table>
+	</div>
+	<hr>
 
-<p> Random <br> text <br> to be inserted </p>
+	<p> Random <br> text <br> to be inserted </p>
 
-<hr>
+	<hr>
 
-<pre style = "font-size : 15px; text-align: center"> 
-Created by
-deedaman
-</pre>
+	<pre style = "font-size : 15px; text-align: center"> 
+	Created by
+	deedaman
+	</pre>
 
 
 </body>
