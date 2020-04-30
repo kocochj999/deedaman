@@ -26,6 +26,7 @@ namespace WindowsFormsApp2
             UC2 = new ItemUC2(Properties.Resources.thẻ_vina, "Vinaphone",  0);
             UC3 = new ItemUC2(Properties.Resources.thẻ_VNG, "Vinagame",  0);
             UC4 = new ItemUC2(Properties.Resources.thẻ_VTC, "VTCGame",  0);
+            UC5 = new ItemUC2(Properties.Resources.thẻ_mobi, "Mobifone", 0);
 
             cardList = new List<ItemUC2>();
 
@@ -33,17 +34,25 @@ namespace WindowsFormsApp2
             cardList.Add(UC2);
             cardList.Add(UC3);
             cardList.Add(UC4);
+            cardList.Add(UC5);
             
             int k = 0;
-            
-            for (int i = 0; i < (cardList.Count/2) ; i++)
+            try
             {
-                for (int j = 0; j < 2; j++)
+                for (int i = 0; i < (cardList.Count / 2) + (cardList.Count % 2); i++)
                 {
-                    cardList[k].Location = new Point(75 + j * 350, i * 350);
-                    k++;
+                    for (int j = 0; j < 2; j++)
+                    {
+                        cardList[k].Location = new Point(75 + j * 350, i * 350);
+                        k++;
+                    }
                 }
             }
+            catch(Exception ex)
+            {
+                
+            }
+            
             foreach (ItemUC2 uc in cardList)
             {
                 this.Controls.Add(uc);

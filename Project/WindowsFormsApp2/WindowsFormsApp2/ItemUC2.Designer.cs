@@ -101,7 +101,6 @@
             this.listBoxPrice.Size = new System.Drawing.Size(91, 24);
             this.listBoxPrice.TabIndex = 9;
             this.listBoxPrice.SelectedIndexChanged += new System.EventHandler(this.listBoxPrice_SelectedIndexChanged);
-            this.listBoxPrice.SelectedValueChanged += new System.EventHandler(this.change);
             // 
             // ItemUC2
             // 

@@ -72,9 +72,9 @@ namespace WindowsFormsApp2
             return this.quantity * this.price;
         }
 
-        private void change(object sender, EventArgs e)
+        private void listBoxPrice_DisplayMemberChanged(object sender, EventArgs e)
         {
-            
+            MessageBox.Show(listBoxPrice.SelectedIndex.ToString());
         }
     }
 }
